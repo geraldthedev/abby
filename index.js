@@ -1,14 +1,15 @@
-document.body.onload = rowMaker, rowMaker;
+document.body.onload = inputMaker;
 
-function rowMaker(){
-var name1 = document.createElement("div");
-var text1 = document.createTextNode("Text loaded");
 
-name1.appendChild(text1);
-
+function inputMaker(){
 var node1 = document.getElementById("div1");
+var name1 = document.createElement("input");
+var button = document.createElement("button");
 
-document.body.insertBefore(name1, node1);
+node1.appendChild(name1);
+node1.appendChild(button);
+button.innerHTML = 'Add';
+button.addEventListener("click");
+
+
 }
-
-
